@@ -1,0 +1,29 @@
+{
+  "name": "sis_prof_ead",
+  "version": "0.0.1",
+  "description": "Sistema para Seleção Simplificada de professores (Demanda",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaylaNascimento/SIS_PROF_EAD.git"
+  },
+  "keywords": [
+    "ead",
+    "professor",
+    "sistema",
+    "analise2"
+  ],
+  "author": "Grupo 2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaylaNascimento/SIS_PROF_EAD/issues"
+  },
+  "homepage": "https://github.com/MaylaNascimento/SIS_PROF_EAD#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.2"
+  }
+}
