@@ -3,7 +3,7 @@ CREATE TABLE "usuarios" (
 	"nome_completo"	TEXT NOT NULL,
 	"login"	TEXT NOT NULL,
 	"senha"	TEXT NOT NULL,
-	"id_permissao"	INTEGER NOT NULL,
+	"id_permissao"	INTEGER NOT NULL DEFAULT 1,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
