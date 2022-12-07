@@ -11,4 +11,9 @@ CREATE TABLE "permissoes" (
 	"id"	INTEGER,
 	"nome"	INTEGER,
 	PRIMARY KEY("id")
-)
+);
+
+INSERT INTO permissoes values(1,'Candidato');
+INSERT INTO permissoes values(2,'Avaliador');
+INSERT INTO permissoes values(3,'Coordenador de Curso');
+INSERT INTO permissoes values(4,'Administrador');

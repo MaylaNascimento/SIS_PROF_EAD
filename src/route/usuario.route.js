@@ -1,9 +1,10 @@
 import { Router } from "express";
+import { cadastrarUsuario, verificarUsuario } from "../controller/usuario.controller.js";
 
 const usuario = Router();
 
-usuario.get("/checarusuario");
-usuario.post("/inserirusuario");
+usuario.get("/checarusuario", verificarUsuario);
+usuario.post("/inserirusuario", cadastrarUsuario);
 usuario.delete("/deletarusuario");
 usuario.put("/alterarusuario");
 
