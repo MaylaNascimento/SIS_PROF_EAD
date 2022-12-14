@@ -2,7 +2,7 @@ import { dnsPrefetchControl } from "helmet";
 import database from "../config/sqlite.config.js";
 
 async function insertUsuario(dados){
-    database.run('INSERT INTO usuarios(nome_completo, login, senha, id_permissao) VALUES (?,?,?,?)', dados);
+    database.run('INSERT INTO usuarios(nome_completo, login, senha) VALUES (?,?,?)', dados);
 }
 
 async function selectUsuario(){
