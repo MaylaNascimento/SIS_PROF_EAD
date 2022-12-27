@@ -2,7 +2,14 @@ import { dnsPrefetchControl } from "helmet";
 import database from "../config/sqlite.config.js";
 
 async function insertUsuario(dados){
-    database.run('INSERT INTO usuarios(nome_completo, login, senha) VALUES (?,?,?)', dados);
+    return new Promise(function (resolve, reject){
+        database.run('INSERT OR IGNORE INTO usuarios(nome_completo, email, senha) VALUES (?,?,?)', dados, function (err){
+            if(err) {reject('Erro No Banco de dados');};
+            if(this.changes == 0) {resolve(false);}
+            resolve(true); 
+        });
+    })
+    
 }
 
 async function selectUsuario(){

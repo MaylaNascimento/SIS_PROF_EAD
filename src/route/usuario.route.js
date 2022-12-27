@@ -4,10 +4,9 @@ import { cadastrarUsuario, verificarUsuario } from "../controller/usuario.contro
 const usuario = Router();
 
 usuario.get("/checarusuario", verificarUsuario);
-usuario.post("/inserirusuario", cadastrarUsuario);
+usuario.post("/cadastro", cadastrarUsuario);
 usuario.delete("/deletarusuario");
 usuario.put("/alterarusuario");
-
 usuario.get("/", (req,res)=>{
     res.status(401).send({"code": 401, "message": "Acesso negado, verifique as permissões."});
 });
