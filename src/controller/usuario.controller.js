@@ -29,8 +29,26 @@ async function cadastrarUsuario(req, res) {
   });
 }
 
-async function verificarUsuario(req, res) {
-  console.log(req.body);
+async function alterarPermissao(req, res){
+  const {userID, novaPermissao} = req.body;
+  await alterarPermissao(Array(userID, novaPermissao))
+  .then(function (resultado) {
+    console.log(resultado);
+    if (resultado) {
+      res.status(201).send({
+        code: 201,
+        mensagem: "Permissões Alteradas",
+        timestamp: new Date(Date.now()).toLocaleString("pt-BR", { timeZone: "America/Fortaleza" })
+      });
+    }
+  })
+  .catch((e) =>{
+    res.status(501).send({
+      code: 501,
+      mensagem: e,
+      timestamp: new Date(Date.now()).toLocaleString("pt-BR", { timeZone: "America/Fortaleza" })
+    });
+  });
 }
 
-export { cadastrarUsuario, verificarUsuario };
+export { cadastrarUsuario, verificarUsuario, alterarPermissao };

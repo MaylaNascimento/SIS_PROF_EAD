@@ -72,12 +72,9 @@ CREATE TABLE IF NOT EXISTS "status_inscricao" (
 INSERT IGNORE INTO permissoes values (1,'Candidato');
 INSERT IGNORE INTO permissoes values (2,'Avaliador');
 INSERT IGNORE INTO permissoes values (3,'Coordenador de Curso');
-INSERT IGNORE INTO permissoes values (4,'Administrador');
 -- Permissões Especiais
 INSERT IGNORE INTO permissoes values  (4,'Coordenador Avaliador');
 -- Status dos Seletivos
 INSERT IGNORE INTO status_inscricao values (1,'Aberto');
 INSERT IGNORE INTO status_inscricao values (2,'Fechado');
-INSERT IGNORE INTO status_inscricao values (3,'Previsto');
-INSERT IGNORE INTO status_inscricao values (4,'Cancelado');
 
