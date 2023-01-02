@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { selectUsuario } from '../repository/usuario.repository';
+import { selectUsuario } from '../repository/usuario.repository.js';
 
 async function login(req, res){
     const {login, senha} = req.query;

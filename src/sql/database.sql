@@ -69,6 +69,15 @@ CREATE TABLE IF NOT EXISTS "status_inscricao" (
 	"tipo"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
+
+CREATE TABLE "inscricoes_seletivo" (
+	"id"	INTEGER,
+	"seletivo_id"	INTEGER,
+	"usuario_id"	INTEGER,
+	"documentos_json"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
 INSERT IGNORE INTO permissoes values (1,'Candidato');
 INSERT IGNORE INTO permissoes values (2,'Avaliador');
 INSERT IGNORE INTO permissoes values (3,'Coordenador de Curso');

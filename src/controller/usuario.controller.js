@@ -51,4 +51,4 @@ async function alterarPermissao(req, res){
   });
 }
 
-export { cadastrarUsuario, verificarUsuario, alterarPermissao };
+export { cadastrarUsuario, alterarPermissao };
