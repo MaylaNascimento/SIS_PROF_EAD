@@ -1,0 +1,20 @@
+Document_list{
+	seletivo_id:int(oculto)
+	disciplina_seletivo:text
+	ultimo_curso:text
+	participa_bolsa_outra_ies:bool
+	documentação: Array(path_files)
+	data: text(oculto)
+	assinatura: ????
+}
+
+Path_files{
+	nome_documento: text
+	local_fisico: text
+	tipo: tipo_documento
+}
+
+tipo_documento{
+	id:int
+	tipo:text
+}
