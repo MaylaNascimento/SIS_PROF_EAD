@@ -16,12 +16,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" />
 
   <!-- Scripts Importados -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
 </head>
 
@@ -85,12 +87,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Dados Para Contato</h1>
+              <h1 class="m-0">Dados Pessoais</h1>
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
       <!-- /.content-header -->
+
       <!-- Main content -->
       <div class="content">
         <div class="container-fluid">
@@ -98,65 +101,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <form>
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Endereço Residencial</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Complemento</label>
+                      <label for="exampleInputEmail1">Nome Completo</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">CEP</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <div id="actions" class="row">
+                      <div class="col-lg-6">
+                        <div class="btn-group w-100">
+                          <span class="btn btn-success col fileinput-button dz-clickable">
+                            <i class="fas fa-plus"></i>
+                            <span>Add files</span>
+                          </span>
+                          <button type="submit" class="btn btn-primary col start">
+                            <i class="fas fa-upload"></i>
+                            <span>Start upload</span>
+                          </button>
+                          <button type="reset" class="btn btn-warning col cancel">
+                            <i class="fas fa-times-circle"></i>
+                            <span>Cancel upload</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-center">
+                        <div class="fileupload-process w-100">
+                          <div id="total-progress" class="progress progress-striped active" role="progressbar"
+                            aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Bairro</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Municipio</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">UF</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Telefone para contato</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Celular</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>                  
-                  <div class="col-md-4">
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">Disponibilidade para ações presenciais</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  </div>
-                </div>
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary float-right">Enviar</button>

@@ -70,11 +70,17 @@ CREATE TABLE IF NOT EXISTS "status_inscricao" (
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
-CREATE TABLE "inscricoes_seletivo" (
+CREATE TABLE IF NOT EXISTS "inscricoes_seletivo" (
 	"id"	INTEGER,
 	"seletivo_id"	INTEGER,
 	"usuario_id"	INTEGER,
 	"documentos_json"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+CREATE TABLE "status_seletivo" (
+	"id"	INTEGER NOT NULL,
+	"status"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 
