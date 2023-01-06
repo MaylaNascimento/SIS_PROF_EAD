@@ -1,4 +1,3 @@
-import { dnsPrefetchControl } from "helmet";
 import database from "../config/sqlite.config.js";
 
 async function insertUsuario(dados){
@@ -20,7 +19,6 @@ async function selectUsuario(dados){
             where u.email = ? and u.senha = ?`, dados,
             (err, rows)=>{
                 if (err) reject('Erro No Banco de dados');
-                if (rows.length == 0) resolve(false);
                 resolve(rows);
         })
     })
