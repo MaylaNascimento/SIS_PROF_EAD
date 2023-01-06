@@ -9,11 +9,11 @@ async function login(req, res){
         const token = jwt.sign({id}, process.env.JWT_TOKEN, {
             expiresIn: 86400
         });
-        return { code: 200, auth: true, token: token, permissao: 0 };        
+        return { code: 200, auth: true, token: token, permissao: resultado.permissao_id };        
       })
       .catch((e) =>{
-        res.status(501).send({
-          code: 501,
+        res.status(500).send({
+          code: 500,
           mensagem: e,
           timestamp: new Date(Date.now()).toLocaleString("pt-BR", { timeZone: "America/Fortaleza" })
         });
