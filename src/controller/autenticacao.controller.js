@@ -3,8 +3,7 @@ import { selectUsuario } from '../repository/usuario.repository.js';
 import md5 from 'md5';
 
 async function login(req, res){
-    const {email, password} = req.body;
-    console.log(Array(email, md5(password)));
+    const {email, password} = req.body;    
     await selectUsuario(Array(email, md5(password)))
     .then(function (resultado) {
         if(resultado == undefined) {
@@ -30,7 +29,7 @@ async function login(req, res){
 }
 
 async function logoff(req,res){
-    res.status(200).send({auth: false, token: null, permissao: -1})
+    res.status(200).send({auth: false, token: null, permissao: -1});
 }
 
 async function checker(req, res, next){

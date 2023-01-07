@@ -5,6 +5,7 @@ async function cadastrarSeletivo(){
         database.run(`INSERT INTO usuarios(funcao, unidade, carga_horaria, req_minimo, 
             vagas_ac, vagas_cra, vagas_cd, vagas_ci, final_inscricao) VALUES (?,?,?,?,?,?,?,?,?)`, dados, function (err){
             if(err) {reject('Erro No Banco de dados');};
+            if(this.changes == 0) resolve(false);
             resolve(true); 
         });
     });
@@ -44,7 +45,5 @@ async function listarSeletivoEspecifico(){
         })
     })
 }
-
-
 
 export {listarTodosSeletivos, listarSeletivosAtivos, listarSeletivoEspecifico, cadastrarSeletivo}
