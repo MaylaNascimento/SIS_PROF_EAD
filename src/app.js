@@ -4,4 +4,5 @@ import auth from "./route/autenticacao.route.js";
 
 app.use("/usuario", usuario);
 app.use("/auth", auth)
+
 export default app;

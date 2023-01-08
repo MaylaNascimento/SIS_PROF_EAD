@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
   <title>Sistema de Seleção de Professores | Registro</title>
 
   <!-- CSS Importado -->
@@ -14,22 +16,21 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 
   <!-- Scripts Importados -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+  <script src="/vendor/jquery.min.js"></script>
+  <script src="/vendor/jquery.validate.min.js"></script>
+  <script src="/vendor/additional-methods.min.js"></script>
+  <script src="/vendor/messages_pt_BR.min.js"></script>
+  <script src="/vendor/bootstrap.min.js"></script>
+  <script src="/vendor/adminlte.min.js"></script>
 
   <!-- Scripts Personalizados -->
-  <script src="./scripts/registro.js"></script>
-  <script src="./scripts/validation.js"></script>
+  <script src="/scripts/registro.js"></script>
 </head>
 
 <body class="hold-transition register-page">
   <div class="register-box">
     <div class="register-logo">
-      <a href="../../index2.html"><b>SSP</b> Registro</a>
+      <a href="login"><b>SSP</b> Registro</a>
     </div>
 
     <div class="card card-primary">
@@ -49,6 +50,7 @@
             </div>
           </div>
           <div class="card-footer">
+            <a class="float-left" href="login" style="margin-top: 6px"> <small  >login</small></a>
             <button type="submit" class="btn btn-primary float-right">Submit</button>
           </div>
         </form>   

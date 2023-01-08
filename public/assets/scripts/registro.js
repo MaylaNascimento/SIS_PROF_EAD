@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("agora vai")
   $.validator.setDefaults({
     submitHandler: function (form) {
       let usuario = {};
@@ -20,7 +21,7 @@ $(document).ready(function () {
         .then(response => response.json())
         .then(function (data){
           if(data.code == 304) alert('Usuario já cadastrado.');          
-          if(data.code == 201) window.location.assign('index.html');
+          if(data.code == 201) window.location.assign('dashboard');
           if(data.code == 501) alert('Erro ao cadastrar, tente novamente.');          
         });
     },

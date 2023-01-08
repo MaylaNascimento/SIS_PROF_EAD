@@ -3,10 +3,21 @@ import { checker, login, logoff } from "../controller/autenticacao.controller.js
 
 const auth = Router();
 
+// API
 auth.post("/login", login);
 auth.post("/logoff", checker, logoff);
-auth.get("/", (req, res) => {
-  res.status(401).send({ code: 401, message: "Acesso negado, verifique as permissões." });
+
+// UI 
+auth.get('/login', function (req, res) {
+  res.render('index');
+});
+
+auth.get('/register', function (req, res) {
+  res.render('register');
+});
+
+auth.get('/forgot-password', function (req, res) {
+  res.render('forgot-password');
 });
 
 

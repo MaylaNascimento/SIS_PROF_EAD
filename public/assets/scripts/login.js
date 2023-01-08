@@ -10,7 +10,7 @@ $(document).ready(function () {
             usuario[item.name] = item.value;
           }
         }); 
-        fetch('http://localhost:3000/usuario/login',{
+        fetch('http://localhost:3000/auth/login',{
             method: 'POST',
             body: JSON.stringify(usuario),
             headers:{
