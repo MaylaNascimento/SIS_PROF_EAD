@@ -7,6 +7,6 @@ import seletivo from "./route/seletivos.route.js";
 app.use("/usuario", usuario);
 app.use("/auth", auth);
 app.use("/admin", admin);
-app.use("/seletivo", seletivo);
+app.use("/admin/seletivo", seletivo);
 
 export default app;

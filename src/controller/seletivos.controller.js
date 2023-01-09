@@ -69,9 +69,9 @@ async function listarSeletivosAtivosController(req,res){
       });
 }
 
-async function listarSeletivoEspecificoController(req,res){
-    const {numeroSeletivo} = req.query;
-    await listarSeletivoEspecifico(Array(numeroSeletivo))
+async function listarSeletivoEspecificoController(req,res, numeroSeletivoReq){
+    const {numeroSeletivo} = req.query ;
+    await listarSeletivoEspecifico(Array(numeroSeletivo || numeroSeletivoReq))
     .then(function (resultado) {
         console.log(resultado);
         if (resultado) {

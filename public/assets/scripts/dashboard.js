@@ -46,7 +46,7 @@ $.extend(true, $.fn.dataTable.defaults, {
 
 $.fn.datatable = $("#main-datatable").DataTable({
     "ajax":  {
-      "url": "http://localhost:3000/seletivo/all",
+      "url": "http://localhost:3000/admin/seletivo/all",
       dataSrc: "data",
       type: "GET"
     },
@@ -58,7 +58,7 @@ $.fn.datatable = $("#main-datatable").DataTable({
         { title: "req_minimo",  data: "req_minimo"  },
         { title: "vagas_total",  data: "vagas_total", width: '10px'   },
         { title: "periodo_inscricao",  data: null, render: function (data) {
-          return `${data.inicio_inscricao} / ${data.final_inscricao}` 
+          return `${data.inicio_inscricao} - ${data.final_inscricao}` 
         }},
         { title: "status",  data: "status", render: function (dat) { 
           let status;
