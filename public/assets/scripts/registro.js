@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("agora vai")
+  
   $.validator.setDefaults({
     submitHandler: function (form) {
       let usuario = {};
@@ -20,9 +20,13 @@ $(document).ready(function () {
         })
         .then(response => response.json())
         .then(function (data){
-          if(data.code == 304) alert('Usuario já cadastrado.');          
-          if(data.code == 201) window.location.assign('dashboard');
-          if(data.code == 501) alert('Erro ao cadastrar, tente novamente.');          
+          if(data.code == 304) Swal.fire( 'Usuário já cadastrado', 'Por favor escolha outro email para cadastro', 'info' );         
+          if(data.code == 501) Swal.fire( 'Erro ao cadastrar', 'Por favor aguarde alguns minutos e tente novamente', 'warning' );   
+          if(data.code == 201) {
+            Swal.fire({ icon: 'success', title:  'Cadastro realizado com sucesso!', showConfirmButton: false, timer: 1500 }).then((result) => {
+              window.location.assign('login');
+            });   
+          }       
         });
     },
   });

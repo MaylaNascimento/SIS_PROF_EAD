@@ -1,24 +1,14 @@
 import { Router } from "express";
-import { checker, login, logoff } from "../controller/autenticacao.controller.js";
+import { checker } from "../controller/autenticacao.controller.js";
 
-const auth = Router();
+const admin = Router();
 
 // API
-auth.post("/login", login);
-auth.post("/logoff", checker, logoff);
 
 // UI 
-auth.get('/login', function (req, res) {
-  res.render('index');
-});
-
-auth.get('/register', function (req, res) {
-  res.render('register');
-});
-
-auth.get('/forgot-password', function (req, res) {
-  res.render('forgot-password');
+admin.get('/', checker, function (req, res) {
+  res.render('dashboard', {user: req.user});
 });
 
 
-export default auth;
+export default admin;

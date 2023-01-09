@@ -19,9 +19,9 @@ $(document).ready(function () {
         })
         .then(response => response.json())
         .then(function (data){     
-            if(data.code == 200) window.location.assign('dashboard.html');
-            if(data.code == 500) alert('Erro ao acessar o login.');       
-            if(data.code == 404) alert('Usuario não encontrado.');            
+            if(data.code == 200) window.location.assign('/admin');
+            if(data.code == 500) Swal.fire( 'Erro ao acessar o login.', 'Por favor aguarde alguns minutos e tente novamente', 'warning' );  
+            if(data.code == 404) Swal.fire({ icon: 'info', title:  'Usuario não encontrado.', showConfirmButton: false, timer: 1500 });            
         });
       },
     });

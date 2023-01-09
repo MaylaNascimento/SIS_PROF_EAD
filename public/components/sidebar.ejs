@@ -1,0 +1,108 @@
+
+<% if (user.permissionId == 1) { %>
+   <!-- Sidebar Candidato -->
+   <div class="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        </li>
+        <li class="nav-item">
+          <a href="admin/minha-incricao" class="nav-link">
+            <i class="nav-icon fas fa-pencil"></i>
+            <p>
+              Minhas inscrições
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="admin/seletivos" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>
+              Seletivos
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+
+<% } %>
+
+
+<% if (user.permissionId == 2) { %>
+  <!-- Sidebar Avaliador -->
+  <div class="sidebar">
+
+   <!-- Sidebar Menu -->
+   <nav class="mt-2">
+     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+       </li>
+       <li class="nav-item">
+         <a href="#" class="nav-link">
+           <i class="nav-icon fas fa-th"></i>
+           <p>
+             Simple Link
+           </p>
+         </a>
+       </li>
+     </ul>
+   </nav>
+   <!-- /.sidebar-menu -->
+ </div>
+ <!-- /.sidebar -->
+
+<% } %>
+
+
+<% if (user.permissionId == 3) { %>
+  <!-- Sidebar Avaliador Coordenador -->
+  <div class="sidebar">
+
+   <!-- Sidebar Menu -->
+   <nav class="mt-2">
+     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+       </li>
+       <li class="nav-item">
+         <a href="#" class="nav-link">
+           <i class="nav-icon fas fa-th"></i>
+           <p>
+             Simple Link
+           </p>
+         </a>
+       </li>
+     </ul>
+   </nav>
+   <!-- /.sidebar-menu -->
+ </div>
+ <!-- /.sidebar -->
+
+<% } %>
+
+
+
+<% if (user.permissionId == 4) { %>
+  <!-- Sidebar Administrador -->
+  <div class="sidebar">
+
+   <!-- Sidebar Menu -->
+   <nav class="mt-2">
+     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+       </li>
+       <li class="nav-item">
+         <a href="#" class="nav-link">
+           <i class="nav-icon fas fa-th"></i>
+           <p>
+             Simple Link
+           </p>
+         </a>
+       </li>
+     </ul>
+   </nav>
+   <!-- /.sidebar-menu -->
+ </div>
+ <!-- /.sidebar -->
+
+<% } %>

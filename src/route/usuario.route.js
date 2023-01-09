@@ -5,6 +5,6 @@ import { checker } from "../controller/autenticacao.controller.js";
 const usuario = Router();
 
 usuario.post("/cadastro", cadastrarUsuario);
-usuario.put("/alterarPermissao", checker, alterarPermissao);
+usuario.put("/alterarPermissao", alterarPermissao);
 
 export default usuario;

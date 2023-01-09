@@ -5,7 +5,7 @@
   "main": "run.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config",
+    "dev": "set DEBUG='express:*' & nodemon -r dotenv/config",
     "start": "node -r dotenv/config run.js"
   },
   "repository": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/MaylaNascimento/SIS_PROF_EAD#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
@@ -32,6 +33,7 @@
     "helmet": "^6.0.0",
     "jsonwebtoken": "^9.0.0",
     "md5": "^2.3.0",
+    "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "path": "^0.12.7",
     "sqlite3": "^5.1.2"
