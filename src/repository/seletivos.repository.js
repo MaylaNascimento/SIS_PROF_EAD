@@ -13,8 +13,8 @@ async function cadastrarSeletivo(){
 
 async function listarTodosSeletivos(){
     return new Promise(function (resolve, reject){
-        database.all(`SELECT funcao, unidade, carga_horaria, req_minimo, 
-        (vagas_ac + vagas_cra + vagas_cd + vagas_ci) as vagas_total,  final_inscricao, status
+        database.all(`SELECT id, funcao, unidade, carga_horaria, req_minimo, 
+        (vagas_ac + vagas_cra + vagas_cd + vagas_ci) as vagas_total,  final_inscricao,  inicio_inscricao, status
         from seletivo`,  (err, rows)=>{
             if(err) reject(err);
             resolve(rows);

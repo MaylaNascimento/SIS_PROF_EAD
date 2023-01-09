@@ -16,6 +16,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/vendor/jquery.dataTables.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 
   <!-- Scripts Importados -->
   <script src="/vendor/jquery.min.js"></script>
@@ -24,9 +27,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="/vendor/messages_pt_BR.min.js"></script>
   <script src="/vendor/bootstrap.min.js"></script>
   <script src="/vendor/adminlte.min.js"></script>
+  <script src="/vendor/select2.min.js"></script>
 
-    <!-- Scripts Personalizados -->
-    <script src="/scripts/dashboard.js"></script>
+
+   <!-- DataTables JS -->
+  <script src="/vendor/jquery.dataTables.min.js"></script>
+
+  <!-- Scripts Personalizados -->
+  <script src="/scripts/dashboard.js"></script>
 
 </head>
 
@@ -53,86 +61,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Dados Para Contato</h1>
+              <h4 class="m-0">Painel</h4>
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
       <!-- /.content-header -->
       <!-- Main content -->
-      <div class="content">
-        <div class="container-fluid">
-          <div class="card card-primary">
-            <form>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Endereço Residencial</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Complemento</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">CEP</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Bairro</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Municipio</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">UF</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Telefone para contato</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Celular</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                  </div>                  
-                  <div class="col-md-4">
-                    <div class="form-group">
-                    <label for="exampleInputEmail1">Disponibilidade para ações presenciais</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary float-right">Enviar</button>
-              </div>
-            </form>
-          </div>
-        </div><!-- /.container-fluid -->
-      </div>
+      <%- include('components/main-content', {user: user}); %>
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

@@ -31,11 +31,10 @@ async function cadastrarSeletivoController(req,res){
 async function listarTodosSeletivosController(req,res){
     await listarTodosSeletivos()
     .then(function (resultado) {
-        console.log(resultado);
         if (resultado) {
           res.status(200).send({
             code: 200,
-            mensagem: resultado,
+            data: resultado,
             timestamp: new Date(Date.now()).toLocaleString("pt-BR", {timeZone: "America/Fortaleza"})
           });
         }
